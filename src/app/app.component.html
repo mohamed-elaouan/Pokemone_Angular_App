@@ -1,0 +1,71 @@
+<h1>Welcome </h1>
+<!-- <Button (click)="getVoiture(3)">Click me!</Button> -->
+<!-- <router-outlet /> -->
+<!-- (click)="getVoiture($event)" -->
+<input type="number" #MyTextField (keyup.enter)="getVoiture(MyTextField.value)">
+
+<br />
+<br />
+<!-- Card template de Afficher le voiture Corspendent -->
+<!-- <style>
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 40%;
+  }
+
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .container {
+    padding: 2px 16px;
+  }
+</style> -->
+<!-- <div *ngIf="MyTextField.value">
+  <div class="card" *ngFor="let ele of VoituresAll">
+    <div *ngIf="ele.Id == MyTextField.value">
+      
+    </div>
+    <img src="https://res-console.cloudinary.com/dhizhhaqs/media_explorer_thumbnails/7ca0a5033d1719740a30a651afaeb063/detailed" alt="Avatar" style="width:100%">
+    <div class="container">
+      <h4><b>John Doe</b></h4> 
+      <p>Architect & Engineer</p> 
+    </div>
+  </div>
+</div> -->
+<h5>Liste les Voitures qui dans le magasin:</h5>
+<br />
+<!-- <br />
+<table border="1" style="margin: auto;">
+  <tr>
+    <th>Matricule</th>
+    <th>module</th>
+    <th>Picture</th>
+    <th>Price</th>
+    <th>marque</th>
+    <th>Date de Creation</th>
+  </tr>
+   *ngIf="VoitureSelected" 
+  <tr *ngFor="let VoitureSelected of VoituresAll">
+    <td>{{ VoitureSelected.Matricule }}</td>
+    <td>{{ VoitureSelected.Module }}</td>
+    <td><img [src]="VoitureSelected.Picture" width="300" alt="_blank" /></td>
+    <td>{{ VoitureSelected.Prices }}</td>
+    <td>{{ VoitureSelected.Marque }}</td>
+    <td>{{ VoitureSelected.Created }}</td>
+  </tr>
+</table> -->
+<!-- Cards -->
+<div style="display: flex;flex-direction: row;flex-wrap: wrap;gap:20px;margin: auto;justify-content: center;">
+  <div class="card" *ngFor="let VoitureSelected of VoituresAll" style="width: 18rem;box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;">
+    <img [src]="VoitureSelected.Picture" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"><b>{{ VoitureSelected.Marque }}</b></h5>
+      <p class="card-text">{{ VoitureSelected.Module }}</p>
+      <p class="card-text">{{ VoitureSelected.Matricule }}</p>
+      <p class="card-text">{{ VoitureSelected.Created }}</p>
+      <a href="#" class="btn btn-primary">{{VoitureSelected.Prices}}</a>
+    </div>
+  </div>
+</div>
