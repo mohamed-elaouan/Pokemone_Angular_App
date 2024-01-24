@@ -24,7 +24,7 @@ export const Voitures: Voiture[] = [
   {
     Id: 3,
     Matricule: "2010/2365",
-    Module: "2021",
+    Module: "2021", 
     Picture:
       "https://res-console.cloudinary.com/dhizhhaqs/media_explorer_thumbnails/c9b92031d82d05d8c2ac0dbb6b0e2a7c/detailed",
     Prices: 90000,
