@@ -5,5 +5,6 @@ export class Voiture{
   Picture:string;
   Prices:number;
   Marque:string;
+  Categorie:string[];
   Created:Date;
 }

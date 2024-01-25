@@ -8,22 +8,22 @@ export class CategorieVoiturePipe implements PipeTransform {
     let color: string;
     switch (type) {
       case "sport":
-        color = "green lighten-1";
+        color = "btn btn-success";
         break;
       case "classic":
-        color = "blue lighten-1";
+        color = "btn btn-secondary";
         break;
       case "famille":
-        color = "yellow lighten-1";
+        color = "btn btn-danger";
         break;
       case "transport":
-        color = "red lighten-1";
+        color = "btn btn-warning";
         break;
       case "marchandise":
-        color = "brown lighten-1";
+        color = "btn btn-primary";
         break;
       default:
-        color="gray";
+        color="btn btn-dark";
         break;
     }
     return `chip ${color}`;

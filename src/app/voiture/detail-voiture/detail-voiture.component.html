@@ -1,0 +1,36 @@
+<style>
+  .parent {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    /*box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;*/
+    padding-block: 10px;
+  }
+
+  .Types {
+    margin-inline: 10px;
+  }
+
+  img {
+    width: 40%;
+  }
+</style>
+<h5 class="font-warning " style="margin-left: 30px; cursor: pointer;" (click)="RetourMethod()"><i
+    class="fa-solid fa-arrow-left"></i> Retour </h5>
+<br>
+<div class="container parent" *ngIf="Voiture" appHoverDetail>
+  <img [src]="Voiture.Picture" class="card-img-top" alt="...">
+  <div class="text">
+    <b>
+      <h1>{{Voiture.Marque}} {{Voiture.Id}}</h1>
+    </b>
+    <p><b>Matricule :</b> {{Voiture.Matricule}}</p>
+    <p><b>Prix :</b> {{Voiture.Prices | currency:'MAD '}}</p>
+    <!--"VoitureId">{{VoitureId}}</p> -->
+    <span *ngFor="let type of Voiture.Categorie" appTypeStyle class="Types {{type | categorieVoiture}}">{{type}}</span>
+    <br>
+    <br>
+    <h5>Date de Creation : <u>{{Voiture.Created | date:"dd-MM-YYYY" }}</u></h5>
+  </div>
+</div>
+<h5 *ngIf="!Voiture">Aucun Voiture est Avoir Cette Id </h5>
