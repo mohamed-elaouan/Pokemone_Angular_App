@@ -1,16 +1,19 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { Voiture } from "../VoitureData/VoitureStructure";
-import { Voitures } from "../VoitureData/VoitureInsertion";
 import {  Router } from "@angular/router";
+import { VoitureService } from "../voiture.service";
 
 @Component({
   selector: "app-list-voiture",
   templateUrl:"./list-voiture.component.html",
   styles: ``,
 })
-export class ListVoitureComponent {
-  constructor(private router:Router){}
-  VoituresAll: Voiture[] = Voitures;
+export class ListVoitureComponent implements OnInit{
+  constructor(private router:Router,private ServicesCar:VoitureService){}
+  VoituresAll: Voiture[];
+  ngOnInit() {
+     this.VoituresAll=this.ServicesCar.getVoitureList();
+  }
   gotoDetail(id:number){
     //Methode 
     //window.location.href=`/Voiture/${id}`
@@ -18,4 +21,5 @@ export class ListVoitureComponent {
     //this.router.navigate([`/Voiture/${id}`]);
     this.router.navigate([`/Voiture`,id]);
   }
+
 }

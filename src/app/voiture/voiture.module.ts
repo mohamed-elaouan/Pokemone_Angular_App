@@ -7,6 +7,7 @@ import { ListVoitureComponent } from "./list-voiture/list-voiture.component";
 import { DetailVoitureComponent } from "./detail-voiture/detail-voiture.component";
 import { HoverDetailDirective } from "./hover-detail.directive";
 import { RouterModule, Routes } from "@angular/router";
+import { VoitureService } from "./voiture.service";
 
 const VoitureRoutes: Routes = [
   { path: "Voitures", component: ListVoitureComponent },
@@ -25,7 +26,7 @@ const VoitureRoutes: Routes = [
     CommonModule,
     // forLinker le Route
     RouterModule.forChild(VoitureRoutes),
-    
   ],
+  //providers: [VoitureService],==> Si preci le Auth
 })
 export class VoitureModule {}

@@ -6,6 +6,7 @@ import { HeaderComponent } from "./Components/header/header.component";
 import { FooterComponent } from "./Components/footer/footer.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 import { VoitureModule } from "./voiture/voiture.module";
+import { VoitureService } from "./voiture/voiture.service";
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { VoitureModule } from "./voiture/voiture.module";
     //toujours tu dois mettre AppRouting en dernierement
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [VoitureService],
   bootstrap: [AppComponent], //Componnent de Demarage
 })
 export class AppModule {}
