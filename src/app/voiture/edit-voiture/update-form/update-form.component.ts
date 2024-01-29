@@ -27,13 +27,32 @@ export class UpdateFormComponent implements OnInit {
   }
   //
   isTypeValid(type: string): boolean {
+    // if (
+    //   this.voiture &&
+    //   this.voiture.Categorie.length > 2 &&
+    //   !this.hasType(type)
+    // ) {
+    //   return true;
+    // } else {
+    //   return false;
+    // }
+    if (
+      this.voiture &&
+      this.voiture.Categorie.length == 1 &&
+      this.hasType(type)
+    ) {
+      return false;
+    }
+
     if (
       this.voiture &&
       this.voiture.Categorie.length > 2 &&
       !this.hasType(type)
     ) {
-      return true;
-    } else return false;
+      return false;
+    }
+
+    return true;
   }
   //pour changer le valeur de la list de categorie voiture
   selectType(eo: Event, type: string) {

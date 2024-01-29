@@ -192,15 +192,15 @@
           <div class="form-group">
             <label id="email-label" for="email">Module</label>
             <!-- VoitureUpdated.form.valid ==> validation de formulaire -->
-            <input type="text" name="module" [(ngModel)]="voiture.Marque" #name="ngModel" pattern="" [disabled]="!VoitureUpdated.form.valid"
-              placeholder="Enter your Module" class="form-control" required />
+            <input type="text" name="module" [(ngModel)]="voiture.Marque" #name="ngModel" pattern=""
+              [disabled]="!VoitureUpdated.form.valid" placeholder="Enter your Module" class="form-control" required />
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
             <label id="email-label" for="email">Price</label>
-            <input type="number" name="price" id="email" [(ngModel)]="voiture.Prices" #name="ngModel" placeholder="Enter your price car" class="form-control"
-              required>
+            <input type="number" name="price" id="email" [(ngModel)]="voiture.Prices" #name="ngModel"
+              placeholder="Enter your price car" class="form-control" required>
           </div>
         </div>
       </div>
@@ -209,12 +209,10 @@
         <h4>Catégorie :</h4>
         <br>
         <div class="col-md-6">
-          <div class="form-group" *ngFor="let type of Categorie" style="display: flex;flex-direction: row;gap:10px ">
-            <input type="checkbox" 
-            [checked]="hasType(type)"  
-            [disabled]="isTypeValid(type)" style="width: fit-content;" 
-            [value]="type"
-            (change)="selectType($event, type)" class="form-checkbox" />
+          <div class="form-group" *ngFor="let type of Categorie"
+            style="display: flex;flex-direction:row;gap:10px;align-items: center;">
+            <input type="checkbox" [checked]="hasType(type)" [disabled]="!isTypeValid(type)" style="font-size:19px;"
+              [value]="type" (change)="selectType($event, type)" class="form-check-input" />
             <span class="{{ type | categorieVoiture}}" style="width: fit-content;">{{type}}</span>
           </div>
         </div>
@@ -228,7 +226,7 @@
 
     </form>
 
-    <div *ngIf="voiture">
+    <div *ngIf="!voiture">
       <h4>Aucun Voiture avoir ce formation</h4>
     </div>
   </div>
