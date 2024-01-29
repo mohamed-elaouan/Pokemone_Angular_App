@@ -7,11 +7,14 @@ import { ListVoitureComponent } from "./list-voiture/list-voiture.component";
 import { DetailVoitureComponent } from "./detail-voiture/detail-voiture.component";
 import { HoverDetailDirective } from "./hover-detail.directive";
 import { RouterModule, Routes } from "@angular/router";
-import { VoitureService } from "./voiture.service";
+import { UpdateFormComponent } from './edit-voiture/update-form/update-form.component';
+import { FormsModule } from "@angular/forms";
+import { EditVoitureComponent } from './edit-voiture/edit-voiture.component';
 
 const VoitureRoutes: Routes = [
   { path: "Voitures", component: ListVoitureComponent },
   { path: "Voiture/:id", component: DetailVoitureComponent },
+  { path: "Voiture/Update/:id", component: EditVoitureComponent },
 ];
 @NgModule({
   declarations: [
@@ -21,9 +24,12 @@ const VoitureRoutes: Routes = [
     ListVoitureComponent,
     DetailVoitureComponent,
     HoverDetailDirective,
+    UpdateFormComponent,
+    EditVoitureComponent,
   ],
   imports: [
     CommonModule,
+    FormsModule,
     // forLinker le Route
     RouterModule.forChild(VoitureRoutes),
   ],

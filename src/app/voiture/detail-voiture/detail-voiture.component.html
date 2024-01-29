@@ -31,6 +31,7 @@
     <br>
     <br>
     <h5>Date de Creation : <u>{{Voiture.Created | date:"dd-MM-YYYY" }}</u></h5>
+    <h5 routerLink="/Voiture/Update/{{Voiture.Id}}" style="color: blue; cursor: pointer;font-weight: bold;" class="Link"> <i class="fa-regular fa-pen-to-square"></i> edit</h5>
   </div>
 </div>
 <h5 *ngIf="!Voiture">Aucun Voiture est Avoir Cette Id </h5>

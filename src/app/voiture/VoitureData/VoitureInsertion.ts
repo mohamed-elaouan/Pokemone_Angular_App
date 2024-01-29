@@ -10,7 +10,7 @@ export const Voitures: Voiture[] = [
     Prices: 50000,
     Marque: "Jaguar",
     Created: new Date(),
-    Categorie: ["famille","marchandise"],
+    Categorie: ["Family","Marchandise"],
   },
   {
     Id: 2,
@@ -21,7 +21,7 @@ export const Voitures: Voiture[] = [
     Prices: 70000,
     Marque: "Audi",
     Created: new Date(),
-    Categorie: ["classic","Sport"],
+    Categorie: ["Classic","Sport"],
   },
   {
     Id: 3,
@@ -32,7 +32,7 @@ export const Voitures: Voiture[] = [
     Prices: 90000,
     Marque: "Mercedes",
     Created: new Date(),
-    Categorie: ["Sport","famille"],
+    Categorie: ["Sport","Family"],
   },
   {
     Id: 4,
@@ -43,7 +43,7 @@ export const Voitures: Voiture[] = [
     Prices: 50000,
     Marque: "Dacia",
     Created: new Date(),
-    Categorie: ["transport","famille"],
+    Categorie: ["Transport","Family"],
   },
   {
     Id: 5,
@@ -54,7 +54,7 @@ export const Voitures: Voiture[] = [
     Prices: 70000,
     Marque: "Alpha Romeo",
     Created: new Date(),
-    Categorie: ["marchandise","transport"],
+    Categorie: ["Marchandise","Transport"],
   },
   {
     Id: 6,
@@ -65,7 +65,7 @@ export const Voitures: Voiture[] = [
     Prices: 90000,
     Marque: "Ford",
     Created: new Date(),
-    Categorie: ["marchandise","transport"],
+    Categorie: ["Marchandise","Transport"],
   },
   {
     Id: 7,
@@ -76,6 +76,6 @@ export const Voitures: Voiture[] = [
     Prices: 90000,
     Marque: "Ford",
     Created: new Date(),
-    Categorie: ["famille","transport"],
+    Categorie: ["Family","Transport"],
   },
 ];
