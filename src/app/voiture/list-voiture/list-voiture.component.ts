@@ -10,7 +10,7 @@ import { VoitureService } from "../voiture.service";
 })
 export class ListVoitureComponent implements OnInit{
   constructor(private router:Router,private ServicesCar:VoitureService){}
-  VoituresAll: Voiture[];
+  VoituresAll: Voiture[] ;
   ngOnInit() {
      this.VoituresAll=this.ServicesCar.getVoitureList();
   }
